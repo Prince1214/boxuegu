@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <link rel="stylesheet" href="./lib/jquery-bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="./less/index.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/index.css">
 </head>
+
 <body>
     <!-- 侧边栏 -->
     <div class="aside">
@@ -30,7 +32,7 @@
                 <li>
                     <a href="./html/teacher/list.html">
                         <i class="fa fa-bell"></i>
-                        <span>讲师管理</span>		
+                        <span>讲师管理</span>
                     </a>
                 </li>
                 <li>
@@ -80,18 +82,16 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="./html/home/settings.html">
-                                <i class="fa fa-user"></i>
-                                个人中心
+                                <i class="fa fa-user"></i> 个人中心
                             </a>
                         </li>
                         <li>
                             <a href="javascript:;">
-                                <i class="fa fa-sign-out"></i>
-                                退出
+                                <i class="fa fa-sign-out"></i> 退出
                             </a>
                         </li>
                     </ul>
-                </nav>          
+                </nav>
             </div>
             <!-- 个人资料 -->
             <div class="body teacher-profile">
@@ -133,9 +133,10 @@
             </div>
         </div>
     </div>
-    
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/common.js"></script>
+    <!-- 所有的第三方包合并的js -->
+    <script src="/dist/js/lib.js"></script>
+    <!-- 该页面独用的js -->
+    <script src="/dist/js/index.js"></script>
 </body>
+
 </html>
