@@ -1,4 +1,2 @@
- var a = require('./common/a.js');
- var b = require('./common/b.js');
- console.log(a);
- console.log(b);
+//首页导入退出功能
+require('./common/header.js');
