@@ -73,7 +73,7 @@ gulp.task('js', function() {
         var pathArr = jsPath.split('/');
         var jsName = pathArr.pop();
         pathArr.shift();
-        browserify(jsPath).bundle() // 打包index.js
+        browserify(jsPath, { debug: true }).bundle() // 打包index.js
             .pipe(source(jsName))
             .pipe(buffer())
             .pipe(uglify())
