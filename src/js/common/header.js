@@ -6,7 +6,7 @@ $('#btn-logout').on('click', function() {
         success: function(data) {
             if (data.code == 200) {
                 alert('退出成功');
-                location.href = '/v6/html/user/login.html';
+                location.href = '/dist/html/user/login.html';
             }
         }
     });
