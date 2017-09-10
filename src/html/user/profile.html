@@ -25,7 +25,8 @@
 
     <script id="teacher-profile-tpl" type="text/template">
         <div class="settings">
-            <form action="" class="form-horizontal">
+            <form id="teacher-profile-form" action="/v6/techer/modify" method="post" class="form-horizontal">
+                <input type="hidden" name="tc_id" value="{{tc_id}}">
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">姓名</label>
                     <div class="col-xs-5">
@@ -45,17 +46,17 @@
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">昵称</label>
                     <div class="col-xs-5">
-                        <input name="" value="{{tc_roster}}" type="text" class="form-control input-sm">
+                        <input name="tc_roster" value="{{tc_roster}}" type="text" class="form-control input-sm">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="col-xs-3 control-label">性别</label>
                     <div class="col-xs-3">
                         <label class="radio-inline">
-                                <input name="tc_gender" type="radio" {{tc_gender == 0?'checked':''}} > 男
+                                <input name="tc_gender" type="radio" value="0" {{tc_gender == 0?'checked':''}} > 男
                             </label>
                         <label class="radio-inline">
-                                <input name="tc_gender" type="radio" {{tc_gender != 0?'checked':''}}> 女
+                                <input name="tc_gender" type="radio" value="1" {{tc_gender != 0?'checked':''}}> 女
                             </label>
                     </div>
                 </div>
@@ -112,7 +113,7 @@
                 <div class="form-group">
                     <div class="col-xs-8">
                         <button type="submit" class="btn btn-success btn-sm pull-right">保 存</button>
-                        <a href="./repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
+                        <a href="/dist/html/user/repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
                     </div>
                 </div>
             </form>
