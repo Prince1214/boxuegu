@@ -118,7 +118,7 @@
                 <td>
                     <a href="#teacherModal" data-toggle="modal" data-target="#teacherModal" class="btn btn-info btn-xs">查 看</a>
                     <a href="/dist/html/teacher/edit.html?cg_id={{teacher.cg_id}}" class="btn btn-info btn-xs">编 辑</a>
-                    <a href="javascript:;" class="btn btn-warning btn-xs">{{teacher.tc_status==0?'注销':'启用'}}</a>
+                    <a data-id="{{teacher.tc_id}}" data-status="{{ teacher.tc_status}}" href="javascript:;" class="btn btn-warning btn-xs btn-teacher">{{teacher.tc_status==0?'注销':'开启'}}</a>
                 </td>
             </tr>
             {{/each}}
