@@ -7,6 +7,7 @@ var cs_id = util.getSearch('cs_id');
 //数据回显
 $.get('/v6/course/basic', { cs_id: cs_id }, function(data) {
     if (data.code == 200) {
+        data.result.editIndex = 1;
         $('#course-edit1').append(template('course-edit1-tpl', data.result));
     }
 });
