@@ -10,3 +10,14 @@ $.get('/v6/course/lesson', { cs_id: cs_id }, function(data) {
         $('#course-edit3').append(template('course-edit3-tpl', data.result));
     }
 });
+//编辑章节数据回显
+$(document).on('click', '.btn-lesson-edit', function() {
+    var data = {
+        ct_id: $(this).attr('data-id')
+    };
+    $.get('/v6/course/chapter/edit', data, function(data) {
+        if (data.code == 200) {
+            $('#chapterModal').html(template('lesson-tpl', data.result));
+        }
+    });
+});
