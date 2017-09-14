@@ -17,7 +17,26 @@ $(document).on('click', '.btn-lesson-edit', function() {
     };
     $.get('/v6/course/chapter/edit', data, function(data) {
         if (data.code == 200) {
+            data.result.cs_id = cs_id;
             $('#chapterModal').html(template('lesson-tpl', data.result));
         }
     });
+});
+//添加章节
+$(document).on('click', '#btn-lesson-add', function() {
+    $('#chapterModal').html(template('lesson-tpl', { cs_id: cs_id }));
+});
+//修改或添加章节成功后的处理回调
+$('#lesson-form').ajaxForm({
+    delegation: true,
+    success: function(data) {
+        //添加成功后，给出提示，并重置表单
+        if (data.result) {
+            alert('添加成功');
+            $('lesson-tpl').get(0).reset();
+        } else {
+            //修改成功后，给出提示
+            alert('修改成功');
+        }
+    }
 });
