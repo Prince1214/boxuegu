@@ -1,5 +1,6 @@
 require('../common/header.js');
 require('../common/aside.js');
+require('../common/loading.js');
 //数据回显
 $.ajax({
     url: '/v6/teacher/profile',

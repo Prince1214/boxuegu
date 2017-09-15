@@ -1,3 +1,4 @@
+require('../common/common.js');
 $("#login-form").ajaxForm({
     success: function(data) {
         if (data.code == 200) {

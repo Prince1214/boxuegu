@@ -1,6 +1,8 @@
 //首页导入退出功能
 require('../common/header.js');
 require('../common/aside.js');
+require('../common/loading.js');
+require('../common/common.js');
 //表单提交
 $('#course-add-form').ajaxForm(function(data) {
     if (data.code == 200) {
